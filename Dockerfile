@@ -1,6 +1,7 @@
-FROM fusuf/whatsasena:latest
+FROM quay.io/lyfe00011/bot:beta
 
-RUN git clone $GITHUB_REPO_URL /root/WhatsAsena
+RUN git clone https://github.com/taurus-efx/userbot-v2 /root/WhatsAsena
+RUN mv /root/bottus/* /root/whatsAsena
 WORKDIR /root/WhatsAsena/
 ENV TZ=Europe/Istanbul
 RUN npm install supervisor -g
